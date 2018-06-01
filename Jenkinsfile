@@ -9,26 +9,23 @@ pipeline {
     stages {
          stage('Test123') {  
         steps {
-               sh 'ls'
                sh 'npm install'
         }
            }
     
-        stage('build') {
+        stage('Test') {
                           
 
             steps {
                
-               sh 'ng build'
+                sh 'npm run ng build'
             }
         }
            
         stage('working_group') {  
-       
-               steps {
-        fileOperations([fileZipOperation('./dist')])
+        steps {
+               fileOperations([fileZipOperation('./dist')])
         }
-    }
            }
         
         stage('Test on Windows') {
@@ -36,9 +33,10 @@ pipeline {
                 label 'Wind_ows'
             }
             steps {
-                  sh 'ls'    
+                sh 'ls'
                 
             }
             
     }
    }
+}
