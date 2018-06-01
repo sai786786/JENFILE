@@ -34,7 +34,7 @@ pipeline {
             }
             steps {
                 sh 'ls'
-                
+                sh 'pwd'
             }
             
     }
