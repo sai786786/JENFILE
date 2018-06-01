@@ -24,9 +24,11 @@ pipeline {
         }
            
         stage('working_group') {  
-        steps {
-               sh 'echo "Yes this Script is Working"'
+       
+               steps {
+        fileOperations([fileZipOperation('./dist')])
         }
+    }
            }
         
         stage('Test on Windows') {
@@ -34,7 +36,7 @@ pipeline {
                 label 'Wind_ows'
             }
             steps {
-                      
+                  sh 'ls'    
                 
             }
             
