@@ -35,7 +35,7 @@ pipeline {
         
         stage('Test on Windows') {
             agent {
-                label 'Wind_ows'
+                label 'Avi'
             }
             steps {
                 sh 'npm install'
