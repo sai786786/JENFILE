@@ -38,8 +38,7 @@ pipeline {
                 label 'Wind_ows'
             }
             steps {
-                sh 'ls'
-                sh 'pwd'
+                sh 'npm install'
             }
             
     }
