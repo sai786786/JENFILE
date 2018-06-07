@@ -29,7 +29,7 @@ pipeline {
            }
       stage('Uploading Artifact'){
       steps{
-               nexusArtifactUploader artifacts: [[artifactId: '$BUILD_TIMESTAMP', classifier: '', file: '/dist.zip', type: 'zip']], credentialsId: 'b8fbf9db-3400-4a8d-9301-221768d5756e', groupId: 'Dev', nexusUrl: '192.168.1.91:8082', nexusVersion: 'nexus3', protocol: 'http', repository: 'Environments', version: '$BUILD_ID'
+               nexusArtifactUploader artifacts: [[artifactId: '$BUILD_TIMESTAMP', classifier: '', file: './dist.zip', type: 'zip']], credentialsId: '1eab6339-9825-4a34-ade5-69e0e1a556ed', groupId: 'Dev', nexusUrl: '192.168.1.91:8082', nexusVersion: 'nexus3', protocol: 'http', repository: 'Environments', version: '$BUILD_ID'
       }
       }
         
