@@ -33,7 +33,7 @@ pipeline {
       }
       }
         
-        stage('Test on Windows') {
+        /*stage('Test on Windows') {
             agent {
                 label 'Avi'
             }
@@ -41,6 +41,6 @@ pipeline {
                 sh 'npm install'
             }
             
-    }
+    }*/
    }
 }
