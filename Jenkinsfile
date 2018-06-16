@@ -42,6 +42,8 @@ pipeline {
   }
             steps {
                 echo "working"
+              sh 'npm run ng build'
+              sh 'ls'
             }
             
     }
