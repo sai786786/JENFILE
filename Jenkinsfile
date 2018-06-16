@@ -33,14 +33,17 @@ pipeline {
       }
       }
         
-        /*stage('Test on Windows') {
+       stage('Test on Windows') {
             agent {
                 label 'Avi'
             }
+         options {
+    skipDefaultCheckout true
+  }
             steps {
-                sh 'npm install'
+                echo "working"
             }
             
-    }*/
+    }
    }
 }
